@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
-import Axios from '../../../node_modules/axios';
+// import Axios from '../../../node_modules/axios';
 import axios from 'axios';
 
 class EditContact extends Component {
@@ -44,6 +44,23 @@ class EditContact extends Component {
       this.setState({ errors: { phone: 'Phone is required' } });
       return;
     }
+
+    const updContact = {
+      name,
+      email,
+      phone
+    };
+
+    const { id } = this.props.match.params;
+    const res = await axios.put(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+      updContact
+    );
+
+    dispatch({
+      type: 'UPDATE_CONTACT',
+      payload: res.data
+    });
 
     // Clear State
     this.setState({
