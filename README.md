@@ -2,8 +2,7 @@
 
 Contact-Manager, powered by [create-react-app](https://github.com/cwooz/create-react-app).
 
-##### Try version `1.0.0-beta` using the following [link](https://agile-atoll-42956.herokuapp.com/).  
-Thanks!
+##### Try version `1.0.0-beta` using the following [link](https://agile-atoll-42956.herokuapp.com/).  Thanks!
 
 ##### Please Note!
 >`The server hosting the app may be hibernating and take as much as 30 seconds to wake`  
